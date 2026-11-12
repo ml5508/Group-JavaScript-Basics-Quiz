@@ -1,0 +1,81 @@
+:root {
+  --navy: #12233f;
+  --blue: #377dff;
+  --sky: #eaf2ff;
+  --green: #138a5b;
+  --red: #b84040;
+  --ink: #1d2a3e;
+  --muted: #607087;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #edf4ff, #fff9e8);
+}
+
+.quiz-card {
+  width: min(100%, 640px);
+  padding: clamp(28px, 6vw, 48px);
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(34, 66, 110, .16);
+}
+
+.eyebrow, .question-count {
+  margin: 0 0 10px;
+  color: var(--blue);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+h1 { margin: 0; color: var(--navy); font-size: clamp(2rem, 5vw, 2.8rem); }
+.intro { margin: 12px 0 32px; color: var(--muted); }
+.question-box { padding: 24px; border: 1px solid #dce7f7; border-radius: 16px; background: #fbfdff; }
+h2 { margin: 0 0 22px; font-size: 1.25rem; line-height: 1.4; }
+.choices { display: grid; gap: 12px; }
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  border: 2px solid #d8e3f2;
+  border-radius: 12px;
+  transition: border-color .15s, background .15s;
+}
+
+.choice:hover { border-color: #98bcff; background: var(--sky); }
+.choice input { accent-color: var(--blue); }
+.choice:has(input:checked) { border-color: var(--blue); background: var(--sky); }
+
+.check-button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  background: var(--blue);
+  border: 0;
+  border-radius: 12px;
+}
+
+.check-button:hover { background: #2167e6; }
+.feedback { min-height: 1.5em; margin: 16px 0 0; font-weight: 700; }
+.feedback.correct { color: var(--green); }
+.feedback.incorrect { color: var(--red); }
+.team-note { margin-top: 28px; color: var(--muted); font-size: .92rem; }
+.team-note summary { cursor: pointer; color: var(--navy); font-weight: 700; }
+.team-note p { margin-bottom: 0; }
+code { padding: 2px 5px; background: #eef2f7; border-radius: 4px; }
