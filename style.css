@@ -43,6 +43,20 @@ h1 { margin: 0; color: var(--navy); font-size: clamp(2rem, 5vw, 2.8rem); }
 h2 { margin: 0 0 22px; font-size: 1.25rem; line-height: 1.4; }
 .choices { display: grid; gap: 12px; }
 
+.open-answer {
+  width: 100%;
+  padding: 14px 16px;
+  resize: vertical;
+  color: var(--ink);
+  font: inherit;
+  line-height: 1.5;
+  border: 2px solid #d8e3f2;
+  border-radius: 12px;
+  outline: none;
+}
+
+.open-answer:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(55, 125, 255, .15); }
+
 .choice {
   display: flex;
   align-items: center;
